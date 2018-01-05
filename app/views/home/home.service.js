@@ -7,8 +7,8 @@ export default class HomeHttpService {
         this.$http = $http;
     }
 
-    getHeader() {
-        return this.$http.get(APP_CONFIG['api']['host'] + ':' + APP_CONFIG['api']['port'] + '/homeHeader');
+    getTripTypes() {
+        return this.$http.get(APP_CONFIG['api']['host'] + ':' + APP_CONFIG['api']['port'] + '/tripTypes');
     }
 }
 
