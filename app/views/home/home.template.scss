@@ -1,0 +1,28 @@
+.home{
+    .header{
+        text-align: center;
+        font-style: italic;
+    }
+    .form{
+        width: 100%;
+        .form-group{
+            width: 100%;
+            text-align: center;
+            clear: both;
+            margin: 10px 0;
+            &.flexible{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .form-group-inner{
+                    padding: 10px;
+                }
+            }
+            .form-group-inner{
+
+            }
+        }
+    }
+}

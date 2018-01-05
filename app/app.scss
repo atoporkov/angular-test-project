@@ -1,0 +1,12 @@
+html,
+body {
+    height: 100%;
+    .container{
+        min-height: 100%;
+        min-width: 100%;
+        .header{
+            text-align: center;
+        }
+        padding: 10px;
+    }
+}

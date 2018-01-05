@@ -1,0 +1,33 @@
+<div class="home">
+    <div class="header">
+        <h2>{{$ctrl.header}}</h2>
+    </div>
+    <div class="form">
+        <div class="form-group">
+            <div class="form-group-inner">
+                <select ng-change="$ctrl.onTripTypeChanged()" ng-model="$ctrl.selectedTripType"
+                    ng-options="item as item.name for item in $ctrl.tripTypes">
+                        <option value="" selected>Type of Trip</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group flexible">
+            <div class="form-group-inner">
+                <input type="text" ng-show="!$ctrl.selectedTripType || $ctrl.selectedTripType.fields.includes('input1')" ng-change="$ctrl.linkedInputChanged()"
+                    placeholder="{{$ctrl.selectedTripType ? 'Input #1' : ''}}" ng-model="$ctrl.input1">
+            </div>
+            <div class="form-group-inner">
+                <input type="text" ng-show="!$ctrl.selectedTripType || $ctrl.selectedTripType.fields.includes('input2')"
+                    placeholder="{{$ctrl.selectedTripType ? 'Input #2' : ''}}" ng-model="$ctrl.input2">
+            </div>
+            <div class="form-group-inner">
+                <input type="text" ng-show="$ctrl.selectedTripType.fields.includes('input3')"
+                    placeholder="{{$ctrl.selectedTripType ? 'Input #3' : ''}}" ng-model="$ctrl.input3">
+            </div>
+            <div class="form-group-inner">
+                <input type="text" ng-show="$ctrl.selectedTripType.fields.includes('input4')"
+                    placeholder="{{$ctrl.selectedTripType ? 'Input #4' : ''}}" ng-model="$ctrl.input4">
+            </div>
+        </div>
+    </div>
+</div>
