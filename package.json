@@ -8,9 +8,9 @@
     "npm": "3.10.10"
   },
   "scripts": {
-    "dev-server": "webpack-dev-server --historyApiFallback",
+    "dev-server": "webpack-dev-server --historyApiFallback --config webpack.dev.config.js",
     "json-server": "json-server --watch json-server.json",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress && json-server --watch json-server.json"
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress && json-server --watch json-server.json"
   },
   "repository": {
     "type": "git",
