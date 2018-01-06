@@ -10,7 +10,7 @@
   "scripts": {
     "dev-server": "webpack-dev-server --historyApiFallback --config webpack.dev.config.js",
     "json-server": "json-server --watch json-server.json",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress && json-server --watch json-server.json"
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js && json-server --watch json-server.json"
   },
   "repository": {
     "type": "git",
