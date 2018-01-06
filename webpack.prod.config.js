@@ -5,4 +5,6 @@ devConfig['output'] = {
     path: '/app'
 };
 
+devConfig['watch'] = false;
+
 module.exports = devConfig;
