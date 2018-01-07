@@ -5,7 +5,7 @@ export default class HomeController {
         this.homeHttpService = HomeHttpService;
         this.selectedTripType = null;
 
-        his._setDefaultInputValues();
+        this._setDefaultInputValues();
 
         this.tripTypes = [
             {
