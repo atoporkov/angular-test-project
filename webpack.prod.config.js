@@ -2,7 +2,7 @@ const devConfig = require('./webpack.dev.config');
 
 devConfig['output'] = {
     filename: 'bundle.js',
-    path: '/app'
+    path: __dirname + '/public'
 };
 
 devConfig['watch'] = false;

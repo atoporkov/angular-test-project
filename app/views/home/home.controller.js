@@ -4,14 +4,31 @@ export default class HomeController {
     constructor(HomeHttpService) {
         this.homeHttpService = HomeHttpService;
         this.selectedTripType = null;
-        this.tripTypes = [];
 
-        this._setDefaultInputValues();
+        his._setDefaultInputValues();
 
-        // just for fun, does not make sence to load trip types from the server
-        this.homeHttpService
-            .getTripTypes()
-                .then(result => this.tripTypes = result.data);
+        this.tripTypes = [
+            {
+               "id": 0,
+               "name": "One-Way",
+               "fields": ["input1","input2"]
+            },
+            {
+               "id": 1,
+               "name": "Round Trip",
+               "fields": ["input1","input2","input3"]
+            },
+            {
+               "id": 2,
+               "name": "Multi-City",
+               "fields": ["input1","input2","input3"]
+            },
+            {
+               "id": 3,
+               "name": "World-Tour",
+               "fields": ["input1","input2","input3","input4"]
+            }
+         ];
     }
 
     _setDefaultInputValues() {
